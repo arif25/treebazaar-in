@@ -9,7 +9,6 @@ import {
   User,
   Menu,
   X,
-  MapPin,
   ChevronDown,
   ExternalLink,
   ShieldCheck,
@@ -59,7 +58,7 @@ export default function Navbar({
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [accountDropdownOpen, setAccountDropdownOpen] = useState(false);
   const [locationModalOpen, setLocationModalOpen] = useState(false);
-  const [currentLocation, setCurrentLocation] = useState('Kolkata 700001');
+  const [currentLocation, setCurrentLocation] = useState('');
 
   const searchRef = useRef<HTMLDivElement>(null);
   const accountRef = useRef<HTMLDivElement>(null);
@@ -67,15 +66,15 @@ export default function Navbar({
   // Filter search suggestions
   const searchResults = searchQuery.trim()
     ? PRODUCTS_DATA.filter((p) => {
-        const matchesCategory =
-          searchCategory === 'all' || p.category === searchCategory;
-        const matchesText =
-          p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          p.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          (p.botanicalName &&
-            p.botanicalName.toLowerCase().includes(searchQuery.toLowerCase()));
-        return matchesCategory && matchesText;
-      }).slice(0, 6)
+      const matchesCategory =
+        searchCategory === 'all' || p.category === searchCategory;
+      const matchesText =
+        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (p.botanicalName &&
+          p.botanicalName.toLowerCase().includes(searchQuery.toLowerCase()));
+      return matchesCategory && matchesText;
+    }).slice(0, 6)
     : [];
 
   useEffect(() => {
@@ -187,13 +186,13 @@ export default function Navbar({
               className="hidden md:flex items-center gap-2 p-1.5 rounded-xl hover:bg-[#EAF6EC] transition-all text-left cursor-pointer shrink-0 border border-transparent hover:border-[#80C995]/40"
               title="Change delivery location"
             >
-              <MapPin className="w-4 h-4 text-[#4CAF72] shrink-0 mt-1" />
+              {/* <MapPin className="w-4 h-4 text-[#4CAF72] shrink-0 mt-1" /> */}
               <div className="text-xs leading-tight">
                 <span className="block text-[11px] text-[#718078] font-normal">
-                  Deliver to Sayed
+                  {/* Deliver to Sayed */}
                 </span>
                 <span className="font-bold text-[#244C38] flex items-center gap-0.5">
-                  {currentLocation}
+                  {/* {currentLocation} */}
                 </span>
               </div>
             </button>

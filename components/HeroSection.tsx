@@ -118,7 +118,7 @@ export default function HeroSection({ onQuickView }: HeroSectionProps) {
             <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#E5EBE4] aspect-[4/3] sm:aspect-[5/4] lg:aspect-[4/4.5] group">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/hero-15.webp"
+                src="/images/plant-shop-shelf-1.jpg"
                 alt="TreeBazaar Indoor Botanical Living"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />

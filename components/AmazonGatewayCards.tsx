@@ -52,7 +52,7 @@ export default function AmazonGatewayCards({
   };
 
   return (
-    <div className="relative z-20 max-w-[1440px] mx-auto px-3 sm:px-6 -mt-24 sm:-mt-36 md:-mt-48 lg:-mt-64 mb-6 sm:mb-10">
+    <section aria-label="Quick Category Portals" className="relative z-10 max-w-[1440px] mx-auto px-3 sm:px-6 mt-6 sm:mt-8 mb-8 sm:mb-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         {/* Card 1: 2x2 Best Plants for Your Home */}
         <div className="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-[#E5EEE5] flex flex-col justify-between hover:shadow-lg transition-shadow">
@@ -256,6 +256,6 @@ export default function AmazonGatewayCards({
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
